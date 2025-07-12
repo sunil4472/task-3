@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Outfit:400,500,700");
+
+:root {
+  --drop-shadow-xlarge: 0px 20px 40px -8px rgba(16, 24, 40, 0.1), 0px 20px 40px -8px rgba(16, 24, 40, 0.05);
+  --neutral-800: rgba(31, 41, 55, 1);
+  
+  /* Typography Variables */
+  --skillshikshya-1-desktop-body-feature-emphasis-font-family: "Outfit", Helvetica;
+  --skillshikshya-1-desktop-body-feature-emphasis-font-size: 24px;
+  --skillshikshya-1-desktop-body-feature-emphasis-font-style: normal;
+  --skillshikshya-1-desktop-body-feature-emphasis-font-weight: 500;
+  --skillshikshya-1-desktop-body-feature-emphasis-letter-spacing: 0px;
+  --skillshikshya-1-desktop-body-feature-emphasis-line-height: normal;
+  
+  --skillshikshya-1-desktop-body-highlight-standard-font-family: "Outfit", Helvetica;
+  --skillshikshya-1-desktop-body-highlight-standard-font-size: 18px;
+  --skillshikshya-1-desktop-body-highlight-standard-font-style: normal;
+  --skillshikshya-1-desktop-body-highlight-standard-font-weight: 400;
+  --skillshikshya-1-desktop-body-highlight-standard-letter-spacing: 0px;
+  --skillshikshya-1-desktop-body-highlight-standard-line-height: normal;
+  
+  --skillshikshya-1-mobile-headings-display-3-font-family: "Outfit", Helvetica;
+  --skillshikshya-1-mobile-headings-display-3-font-size: 32px;
+  --skillshikshya-1-mobile-headings-display-3-font-style: normal;
+  --skillshikshya-1-mobile-headings-display-3-font-weight: 700;
+  --skillshikshya-1-mobile-headings-display-3-letter-spacing: 0px;
+  --skillshikshya-1-mobile-headings-display-3-line-height: 120%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Outfit", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
